@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Case Studies — Thaddeus Liu</title>
-<meta name="description" content="Programmatic SEO, entity-based content, SEO middle platforms — production case studies by Thaddeus Liu.">
+<meta name="description" content="Programmatic SEO, templated long-tail content, SEO middle platforms — production case studies by Thaddeus Liu.">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
 </header>
 
 <div class="summary">
-  <p><strong>The thread.</strong> I&rsquo;ve spent 15 years replacing manual content production with systems &mdash; programmatic landing pages, entity content, SEO middle platforms, and now GEO/AEO for AI assistants. Three case studies below illustrate the pattern at three scales: a wiki-pattern that took a dictionary to 200K DAU, a 1.5M-page system that grew an OTA&rsquo;s non-brand organic orders ~9&times; over four years, and a global SEO middle platform that found 99.97% of indexed pages didn&rsquo;t earn their existence &mdash; a single delete-button press moved the long-tail metric by 7&times;.</p>
+  <p><strong>The thread.</strong> I&rsquo;ve spent 15 years replacing manual content production with systems &mdash; programmatic landing pages, templated long-tail content, SEO middle platforms, and now GEO/AEO for AI assistants. Three case studies below illustrate the pattern at three scales: a modular per-word system that took a dictionary to 200K DAU, a 1.5M-page system that grew an OTA&rsquo;s non-brand organic orders ~9&times; over four years, and a global SEO middle platform that found 99.97% of indexed pages didn&rsquo;t earn their existence &mdash; a single delete-button press moved the long-tail metric by 7&times;.</p>
 </div>
 
 <h2>Case 1 &mdash; Programmatic SEO at 1.5M-page scale (eLong / Expedia, 2012&ndash;2017)</h2>
@@ -56,26 +56,27 @@
 <h3>Adjacent: SEM automation</h3>
 <p>Same engineering mindset applied to paid: replaced a 15-person manual SEM operation with a Ruby on Rails platform and a unified search-engine API abstraction. Steady-state <strong>20M keywords</strong> across Baidu, 360, Sogou, Soso (now defunct), and Shenma (mobile-only). Hive-based attribution joined spend to order value at the keyword level, making spend-vs-profit visible by default. ROI <strong>+50%</strong> vs. the manual baseline.</p>
 
-<h2>Case 2 &mdash; Entity-based SEO via wiki pattern (Youdao Dictionary, 2011&ndash;2012)</h2>
+<h2>Case 2 &mdash; Modular per-word pages (Youdao Dictionary, 2011&ndash;2012)</h2>
 
 <h3>Problem</h3>
 <p>Youdao Dictionary was a translation/lookup product fighting for organic visibility against larger competitors. The search opportunity wasn&rsquo;t in transactional queries &mdash; it was in the <em>informational</em> long tail: people looking up terms from their own field of work or study, in context. Each term deserved a page that answered the real question behind the search, not just a dictionary entry.</p>
 
 <h3>Approach</h3>
 <ul>
-  <li><strong>Wiki-pattern entity pages.</strong> Built terminology pages structured around real user search journeys. Each page wasn&rsquo;t just a definition &mdash; it was a small encyclopedic entry: definition, etymology, usage examples, related terms (linked), real-world context.</li>
-  <li><strong>Domain-aware templates.</strong> Different page archetypes for legal terms, medical terms, technical jargon, idioms &mdash; each tuned to what a searcher in that domain actually needs.</li>
-  <li><strong>Topical authority through interlinking.</strong> Heavy lateral interlinking within domains so that related terms reinforced each other&rsquo;s rankings.</li>
+  <li><strong>Per-word pages, foreign &harr; Chinese.</strong> Built each page around a single word. For a foreign word (e.g. <em>notebook</em>) the page gave the Chinese translation (&#31508;&#35760;&#26412;) plus everything a user should know about that word &mdash; definition, explanation, sample sentences, related content. Not a bare A&rarr;B translation; a full answer to what the searcher actually wanted to know.</li>
+  <li><strong>Each module at its own URL.</strong> The content on a word&rsquo;s page was split into standalone module pages &mdash; sample sentences, definition, and so on &mdash; each with its own URL. A search for &ldquo;sample sentences of notebook&rdquo; or &ldquo;what does notebook mean&rdquo; landed directly on the right module, not a generic entry. The wiki lived in the structure of these independently discoverable module pages.</li>
+  <li><strong>Term corpus from upstream of search.</strong> One templated pattern &mdash; not per-domain archetypes. The term list came from the Sogou input-method&rsquo;s Cell of Words (&#35789;&#24211;): the input method sits upstream of search, so it captures what people actually type before they ever reach a search engine. That corpus spans every domain naturally, which is where the domain coverage came from.</li>
+  <li><strong>Discovery through a layered sitemap.</strong> Homepage &rarr; sub-homepage &rarr; each domain &rarr; subcategory with pagination, so search engines could crawl the full tree. Each main translation page linked out to its module subpages.</li>
 </ul>
 
 <h3>Results</h3>
 <ul>
-  <li><span class="stat">Search-engine DAU 10K &rarr; 180&ndash;200K</span></li>
+  <li><span class="stat">Dictionary DAU 10K &rarr; 180&ndash;200K</span></li>
   <li>Translation-product brand traffic +100%</li>
   <li>Awarded Best Employee 4 months after joining</li>
 </ul>
 
-<p><em>Note from 2026.</em> This pattern &mdash; entity content + topical authority + intent-shaped templates &mdash; is what modern developer-documentation SEO has rediscovered. Mintlify/Docusaurus/ReadMe sites that rank well today are doing structurally what we did at Youdao 15 years ago. The platforms are different; the principles are identical.</p>
+<p><em>Note from 2026.</em> This pattern &mdash; modular, intent-shaped per-word pages, each module independently discoverable &mdash; is what modern developer-documentation SEO has rediscovered. Mintlify/Docusaurus/ReadMe sites that rank well today are doing structurally what we did at Youdao 15 years ago. The platforms are different; the principles are identical.</p>
 
 <h2>Case 3 &mdash; Global SEO middle platform (Alibaba, 2017&ndash;2019)</h2>
 
