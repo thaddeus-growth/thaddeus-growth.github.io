@@ -28,7 +28,7 @@
 </header>
 
 <div class="summary">
-  <p><strong>The thread.</strong> I&rsquo;ve spent 15 years replacing manual content production with systems &mdash; programmatic landing pages, templated long-tail content, SEO middle platforms, and now GEO/AEO for AI assistants. Three case studies below illustrate the pattern at three scales: a modular per-word system that took a dictionary to 200K DAU, a 1.5M-page system that grew an OTA&rsquo;s non-brand organic orders ~9&times; over four years, and a global SEO middle platform that found 99.97% of indexed pages didn&rsquo;t earn their existence &mdash; a single delete-button press moved the long-tail metric by 7&times;.</p>
+  <p><strong>The thread.</strong> I&rsquo;ve spent 15 years replacing manual content production with systems &mdash; programmatic landing pages, templated long-tail content, SEO middle platforms, and now GEO/AEO for AI assistants. Three case studies below illustrate the pattern at three scales: a modular per-word system that grew a dictionary from ~200/day to 180K&ndash;200K daily non-brand organic UV, a 1.5M-page system that grew an OTA&rsquo;s non-brand organic orders ~9&times; over four years, and a global SEO middle platform that found 99.97% of indexed pages didn&rsquo;t earn their existence &mdash; a single content-convergence move (removing ~10&ndash;20M duplicate landing pages) lifted long-tail non-brand organic traffic by ~70K UV/day in ~10 days.</p>
 </div>
 
 <h2>Case 1 &mdash; Programmatic SEO at 1.5M-page scale (eLong / Expedia, 2012&ndash;2017)</h2>
@@ -71,9 +71,7 @@
 
 <h3>Results</h3>
 <ul>
-  <li><span class="stat">Dictionary DAU 10K &rarr; 180&ndash;200K</span></li>
-  <li>Translation-product brand traffic +100%</li>
-  <li>Awarded Best Employee 4 months after joining</li>
+  <li><span class="stat">Dictionary non-brand organic UV ~200/day &rarr; 180&ndash;200K/day</span></li>
 </ul>
 
 <p><em>Note from 2026.</em> This pattern &mdash; modular, intent-shaped per-word pages, each module independently discoverable &mdash; is what modern developer-documentation SEO has rediscovered. Mintlify/Docusaurus/ReadMe sites that rank well today are doing structurally what we did at Youdao 15 years ago. The platforms are different; the principles are identical.</p>
@@ -87,27 +85,26 @@
 <ul>
   <li>Both sites had <strong>5&ndash;6 billion indexed pages each</strong>. AliExpress measures success by orders; Alibaba.com is B2B and measures success by quote requests.</li>
   <li>Counting the pages that actually drove business outcomes (orders on AliExpress, quote requests on Alibaba.com), only about <span class="stat">2 million</span> earned their existence &mdash; and a strict count would put it closer to 500K.</li>
-  <li>That&rsquo;s roughly <strong>0.03%&ndash;0.04% of indexed pages</strong>. The remaining 99.97% were diluting crawl budget and drowning out the good content.</li>
-  <li>Diagnosis: <strong>content convergence problem</strong>, not a content generation problem.</li>
+  <li>That&rsquo;s roughly <strong>0.03%&ndash;0.04% of indexed pages &mdash; about 2 million out of 5&ndash;6 billion earned their existence</strong>. The remaining 99.97% were diluting crawl budget and drowning out the good content.</li>
+  <li>Diagnosis: pruning the long tail of low-value pages would do more for the index than adding more pages.</li>
 </ul>
 
 <h3>What I did</h3>
 <ul>
-  <li><strong>Phase 1 &mdash; content convergence.</strong> AliExpress had separate buyer-side and seller-side product detail pages, both indexed. Removed the redundant set. <span class="stat">Long-tail organic traffic went up ~70K UV/day almost immediately</span> &mdash; a 7&times; lift on the metric that mattered, with no new content. Sometimes the answer to &ldquo;more traffic&rdquo; is &ldquo;fewer pages.&rdquo;</li>
-  <li><strong>Phase 2 &mdash; the SEO middle platform.</strong> Built shared SEO infrastructure for AliExpress, Alibaba.com, and Taobao Overseas &mdash; hreflang, canonicalization, schema, sitemaps, internal linking, all at platform scale. The principle generalized: stop building parallel per-market systems; build one platform that does it right and every site benefits.</li>
+  <li><strong>Phase 1 &mdash; content convergence.</strong> AliExpress had separate buyer-side and seller-side product detail pages, both indexed. Removed ~10&ndash;20M duplicate landing pages. <span class="stat">Long-tail non-brand organic traffic went up ~70K UV/day in ~10 days</span> with no new content. Sometimes the answer to &ldquo;more traffic&rdquo; is &ldquo;fewer pages.&rdquo;</li>
+  <li><strong>Phase 2 &mdash; the SEO middle platform.</strong> Built shared SEO infrastructure for AliExpress, Alibaba.com, and Taobao Overseas &mdash; hreflang, canonicalization, schema, sitemaps, internal linking, all at platform scale &mdash; <strong>plus a keyword-clustering pipeline for ~600M keywords across ~10&ndash;15 languages</strong>. <strong>DAMO Academy quoted 20 engineers &times; 1 year per language</strong> to do the clustering; my team did it with <strong>1 engineer &times; 1 month</strong> (~50% coverage, using Google SERP as a clustering reference). The principle generalized: stop building parallel per-market systems; build one platform that does it right and every site benefits.</li>
 </ul>
 
 <h3>Results</h3>
 <ul>
-  <li>Reversed multi-year organic-traffic decline</li>
-  <li>Long-tail non-brand organic on AliExpress / Alibaba.com: <span class="stat">&lt; 1,000 UV/day &rarr; ~200,000 UV/day</span></li>
+  <li>Reversed a 3&ndash;4-year organic-traffic decline with <strong>+10&ndash;15% YoY total site UV in year 1</strong>; orders (AliExpress) and quote requests (Alibaba.com) growing in parallel</li>
   <li>Taobao Overseas long-tail: near-zero &rarr; added ~150K UV/day</li>
-  <li>Full-funnel UX optimization lifted organic conversion rate by 10% on top of the traffic gains</li>
-  <li><span class="stat">Saved 90%+ headcount</span> vs. the per-market, per-team model that would have been required otherwise</li>
+  <li>Full-funnel UX optimization (a separate but related project) lifted organic conversion rate by 10% on top of the traffic gains</li>
+  <li><span class="stat">Saved 90%+ headcount vs. DAMO Academy&rsquo;s quoted cost</span> (conservative; the real saving is 99%+)</li>
 </ul>
 
 <h2>Current: GEO / AEO on Doubao / DeepSeek and other AI assistants (2025&mdash;)</h2>
-<p>The same engineering mindset extends naturally to the next surface. At Cheetah Mobile (2025&ndash;26) I ran a production GEO operation on Chinese AI assistants (Doubao / DeepSeek and others) &mdash; the full daily loop from query investigation through content to measurement, across three China-market B2B lines. Attribution was closed through a customer-service intake that verified where each client first heard the brand, surfacing AI-assistant discovery. GEO&rsquo;s contribution to orders grew from 10% to ~50% on average (a 63% peak for two weeks) in under a year. Now extending the same approach for a leading automotive platform.</p>
+<p>The same engineering mindset extends naturally to the next surface. At Cheetah Mobile (2025&ndash;26) I ran a production GEO operation on Chinese AI assistants (Doubao / DeepSeek and others) &mdash; the full daily loop from query investigation through content to measurement, across three China-market B2B lines (service robots; FB/Google/TikTok ad agency; cloud-infrastructure reselling). Attribution was closed through a standardized CS-led source-verification script. GEO&rsquo;s share of <strong>market-channel commercial opportunities for the service-robot line</strong> grew from 10% to ~50% on average (a 63% peak for two weeks during Doubao&rsquo;s Spring Festival ad campaign) in under a year. Now extending the same approach for Guazi used-cars (C2C, both buyers and sellers).</p>
 
 <p>The patterns from cases 1&ndash;3 transfer directly: intent &rarr; archetype mapping, entity content with topical authority, platform-level automation, content convergence. The surfaces change; the engineering mindset doesn&rsquo;t.</p>
 
