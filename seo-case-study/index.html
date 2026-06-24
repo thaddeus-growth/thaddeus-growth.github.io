@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Case Studies — Thaddeus Liu</title>
+<meta name="description" content="Programmatic SEO, entity-based content, SEO middle platforms — production case studies by Thaddeus Liu.">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../" class="brand">Thaddeus Liu</a>
+    <a href="../">Resume</a>
+    <a href="./" class="active">Case Studies</a>
+    <a href="../resume.pdf">PDF</a>
+  </div>
+</nav>
+
+<main>
+<header>
+  <h1>Case Studies</h1>
+  <p class="tag">Programmatic SEO · content engineering · GEO/AEO · 15+ years</p>
+  <p class="meta">
+    Beijing, China · Relocating to US ·
+    <a href="mailto:thaddeus.geek@gmail.com">thaddeus.geek@gmail.com</a>
+  </p>
+</header>
+
+<div class="summary">
+  <p><strong>The thread.</strong> I&rsquo;ve spent 15 years replacing manual content production with systems &mdash; programmatic landing pages, entity content, SEO middle platforms, and now GEO/AEO for AI assistants. Three case studies below illustrate the pattern at three scales: a wiki-pattern that took a dictionary to 200K DAU, a 1.5M-page system that grew an OTA&rsquo;s non-brand organic orders ~9&times; over four years, and a global SEO middle platform that found 99.97% of indexed pages didn&rsquo;t earn their existence &mdash; a single delete-button press moved the long-tail metric by 7&times;.</p>
+</div>
+
+<h2>Case 1 &mdash; Programmatic SEO at 1.5M-page scale (eLong / Expedia, 2012&ndash;2017)</h2>
+
+<h3>Problem</h3>
+<p>eLong (one of China&rsquo;s largest OTAs at the time) had a long-tail traffic problem. Travelers don&rsquo;t just search for hotels by city &mdash; they search for hotels near <em>specific places</em>: airports, train stations, hospitals, tourist sites, conference centers, individual streets and metro stops. Each of those queries deserved its own landing page, but there were millions of them, and manually authoring even a fraction was not viable. The previous external SEO vendor had tried 10M+ pure-spam keyword pages &mdash; Baidu de-indexed almost all of them within a month. The lesson: long-tail SEO needs business logic, not just keywords.</p>
+
+<h3>Approach</h3>
+<ul>
+  <li><strong>One templated page form for every POI type.</strong> Same layout, same content blocks, same data sources &mdash; not separate archetypes for airport / hospital / attraction / transit hub. The page was a single traveler-decision-journey view: how to get there from each transport hub, local services within 5km, &ge;3 bookable hotels nearby with an interactive map. One form, all POI types.</li>
+  <li><strong>Programmatic generation.</strong> Cron job pulled POI data from Gaode / Baidu APIs (with map-area services: banks, transit, attractions, hospitals) + eLong&rsquo;s own hotel inventory. Rendered static HTML + CSS + JS with an embedded interactive map component. CDN-cacheable. Same pages for PC and mobile (responsive). A separate cron updated the sitemap; Baidu discovered new pages through it.</li>
+  <li><strong>Quality gate, not search volume.</strong> The ship-or-not condition was <span class="stat">&ge;3 bookable hotels within 5km</span> &mdash; a real business-value condition. Map providers returned 15&ndash;20M raw POIs; after dedup and filtering, 1.5M made the cut. ~90% were eventually indexed (~1.35M). I did not filter by search volume: real landmarks eventually get searched.</li>
+  <li><strong>Internal linking architecture.</strong> Built as opportunities arose, not on a strict schedule: city pages &rarr; key POIs in that city; business-district pages (a special POI type) &rarr; nearby key POIs; hotel detail pages &rarr; nearby POIs. Hub-and-spoke from inventory to long tail.</li>
+  <li><strong>Discipline, not feature count.</strong> Built a 150K-UV/day intracity transit-routes feature, then closed it directly: eLong earned on hotels only, and this had zero business value. No escalation needed &mdash; the standing principle from the CEO was &ldquo;the board measures me on orders only, don&rsquo;t build traffic that has no value.&rdquo;</li>
+</ul>
+
+<h3>Results</h3>
+<ul>
+  <li><span class="stat">~9&times; growth in non-brand organic orders over 4 years</span> (2&times;, 2&times;, 1.5&times;, 1.5&times; year-on-year)</li>
+  <li><span class="stat">20&ndash;30M RMB annual net profit</span> in the best year (conservative estimate using company-wide cost basis &mdash; real number is likely higher)</li>
+  <li>Total SEO channel reached ~10% of all orders by end of tenure (mostly brand-SEO; the non-brand slice from this work is a fraction, tracked separately)</li>
+  <li>Team evolved from 1 SEO operator + 5 editors to 5 engineers, 0 SEO operators, 0 editors &mdash; manual content production was the wrong shape for the page volume needed</li>
+</ul>
+
+<h3>Adjacent: SEM automation</h3>
+<p>Same engineering mindset applied to paid: replaced a 15-person manual SEM operation with a Ruby on Rails platform and a unified search-engine API abstraction. Steady-state <strong>20M keywords</strong> across Baidu, 360, Sogou, Soso (now defunct), and Shenma (mobile-only). Hive-based attribution joined spend to order value at the keyword level, making spend-vs-profit visible by default. ROI <strong>+50%</strong> vs. the manual baseline.</p>
+
+<h2>Case 2 &mdash; Entity-based SEO via wiki pattern (Youdao Dictionary, 2011&ndash;2012)</h2>
+
+<h3>Problem</h3>
+<p>Youdao Dictionary was a translation/lookup product fighting for organic visibility against larger competitors. The search opportunity wasn&rsquo;t in transactional queries &mdash; it was in the <em>informational</em> long tail: people looking up terms from their own field of work or study, in context. Each term deserved a page that answered the real question behind the search, not just a dictionary entry.</p>
+
+<h3>Approach</h3>
+<ul>
+  <li><strong>Wiki-pattern entity pages.</strong> Built terminology pages structured around real user search journeys. Each page wasn&rsquo;t just a definition &mdash; it was a small encyclopedic entry: definition, etymology, usage examples, related terms (linked), real-world context.</li>
+  <li><strong>Domain-aware templates.</strong> Different page archetypes for legal terms, medical terms, technical jargon, idioms &mdash; each tuned to what a searcher in that domain actually needs.</li>
+  <li><strong>Topical authority through interlinking.</strong> Heavy lateral interlinking within domains so that related terms reinforced each other&rsquo;s rankings.</li>
+</ul>
+
+<h3>Results</h3>
+<ul>
+  <li><span class="stat">Search-engine DAU 10K &rarr; 180&ndash;200K</span></li>
+  <li>Translation-product brand traffic +100%</li>
+  <li>Awarded Best Employee 4 months after joining</li>
+</ul>
+
+<p><em>Note from 2026.</em> This pattern &mdash; entity content + topical authority + intent-shaped templates &mdash; is what modern developer-documentation SEO has rediscovered. Mintlify/Docusaurus/ReadMe sites that rank well today are doing structurally what we did at Youdao 15 years ago. The platforms are different; the principles are identical.</p>
+
+<h2>Case 3 &mdash; Global SEO middle platform (Alibaba, 2017&ndash;2019)</h2>
+
+<h3>Problem</h3>
+<p>AliExpress and Alibaba.com had been losing organic traffic for years, despite having two of the largest e-commerce catalogs in the world. Past long-tail SEO work had been adding pages. That was the wrong direction.</p>
+
+<h3>Investigation</h3>
+<ul>
+  <li>Both sites had <strong>5&ndash;6 billion indexed pages each</strong>. AliExpress measures success by orders; Alibaba.com is B2B and measures success by quote requests.</li>
+  <li>Counting the pages that actually drove business outcomes (orders on AliExpress, quote requests on Alibaba.com), only about <span class="stat">2 million</span> earned their existence &mdash; and a strict count would put it closer to 500K.</li>
+  <li>That&rsquo;s roughly <strong>0.03%&ndash;0.04% of indexed pages</strong>. The remaining 99.97% were diluting crawl budget and drowning out the good content.</li>
+  <li>Diagnosis: <strong>content convergence problem</strong>, not a content generation problem.</li>
+</ul>
+
+<h3>What I did</h3>
+<ul>
+  <li><strong>Phase 1 &mdash; content convergence.</strong> AliExpress had separate buyer-side and seller-side product detail pages, both indexed. Removed the redundant set. <span class="stat">Long-tail organic traffic went up ~70K UV/day almost immediately</span> &mdash; a 7&times; lift on the metric that mattered, with no new content. Sometimes the answer to &ldquo;more traffic&rdquo; is &ldquo;fewer pages.&rdquo;</li>
+  <li><strong>Phase 2 &mdash; the SEO middle platform.</strong> Built shared SEO infrastructure for AliExpress, Alibaba.com, and Taobao Overseas &mdash; hreflang, canonicalization, schema, sitemaps, internal linking, all at platform scale. The principle generalized: stop building parallel per-market systems; build one platform that does it right and every site benefits.</li>
+</ul>
+
+<h3>Results</h3>
+<ul>
+  <li>Reversed multi-year organic-traffic decline</li>
+  <li>Long-tail non-brand organic on AliExpress / Alibaba.com: <span class="stat">&lt; 1,000 UV/day &rarr; ~200,000 UV/day</span></li>
+  <li>Taobao Overseas long-tail: near-zero &rarr; added ~150K UV/day</li>
+  <li>Full-funnel UX optimization lifted organic conversion rate by 10% on top of the traffic gains</li>
+  <li><span class="stat">Saved 90%+ headcount</span> vs. the per-market, per-team model that would have been required otherwise</li>
+</ul>
+
+<h2>Current: GEO / AEO on Doubao and other AI assistants (2025&mdash;)</h2>
+<p>The platform thinking extends naturally to the next surface. At Cheetah Mobile (2025&ndash;26) I built a GEO middle-platform that improved brand visibility on Chinese AI assistants (Doubao and others), closed the attribution loop, and grew GEO&rsquo;s contribution to orders from 10% to 50% in under a year &mdash; supporting three business lines. Now extending the same approach for a leading automotive platform.</p>
+
+<p>The patterns from cases 1&ndash;3 transfer directly: intent &rarr; archetype mapping, entity content with topical authority, platform-level automation, content convergence. The surfaces change; the engineering mindset doesn&rsquo;t.</p>
+
+<div class="see-also">
+  <strong>See also</strong>
+  <a href="../">Resume</a> &nbsp;|&nbsp;
+  <a href="../resume.pdf">Resume PDF</a>
+</div>
+
+<footer>
+  <p>Last updated June 2026 · <a href="mailto:thaddeus.geek@gmail.com">thaddeus.geek@gmail.com</a></p>
+</footer>
+
+</main>
+</body>
+</html>
